@@ -3,8 +3,20 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 
-// create instance of express
+// set up express
 var app = express();
-
-// setup PORT
 var PORT = process.env.PORT || 8080;
+
+// set up express to use body-parser
+app.use(bodyParser.urlencoded({ expanded: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.text());
+
+// routes
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
+
+// start server
+app.listen(PORT, function() {
+    console.log("server listening on PORT: " + PORT);
+});

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scrubs Survey</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <br>
+    <!-- begin survey form -->
+    <h1 class="col-8 mx-auto"><i class="far fa-kiss-wink-heart text-danger"></i>&nbsp; Survey</h1>
+    <hr class="my-4 col-8 bg-primary">
+    <form class="col-8 mx-auto needs-validation" novalidate>
+       
+        <!-- about you section -->
+        <h3>About You</h3>
+        <div class="form-group">
+            <label for="name">Name <span class="text-danger font-weight-bold">*</span></label>
+            <input type="text" class="form-control bg-light" id="nameInput" required>
+            <div class="invalid-feedback">Please enter your name.</div>
+        </div>
+        <div class="form-group">
+            <label for="photoURL">Photo Link (URL) <span class="text-danger font-weight-bold">*</span></label>
+            <input type="url" class="form-control bg-light" id="photoURL" required>
+            <div class="invalid-feedback">Please enter a valid URL.</div>
+            <hr class="my-4 bg-primary">
+        </div>
+        
+        <!-- begin survey questions -->
+        <h4>Question 1</h4>
+        <div class="form-group">
+            <label for="question1">Your mind is always buzzing with unexplored ideas and plans.</label>
+            <select class="custom-select bg-light" required>
+                <option value="">Select an option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <div class="invalid-feedback">Please select an option.</div>
+        </div>
+        <hr class="my-4">
+
+        <h4>Question 2</h4>
+        <div class="form-group">
+            <label for="question2">Generally speaking, you rely more on your experience than your imagination.</label>
+            <select class="custom-select bg-light" required>
+                <option value="">Select an option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <div class="invalid-feedback">Please select an option.</div>
+        </div>
+        <hr class="my-4">
+
+        <h4>Question 3</h4>
+        <div class="form-group">
+            <label for="question3">You find it easy to stay relaxed and focused even when under some pressure.</label>
+            <select class="custom-select bg-light" required>
+                <option value="">Select an option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <div class="invalid-feedback">Please select an option.</div>
+        </div>
+        <hr class="my-4">
+
+        <h4>Question 4</h4>
+        <div class="form-group">
+            <label for="question4">You rarely do something just out of sheer curiosity.</label>
+            <select class="custom-select bg-light" required>
+                <option value="">Select an option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <div class="invalid-feedback">Please select an option.</div>
+        </div>
+        <hr class="my-4">
+
+        <h4>Question 5</h4>
+        <div class="form-group">
+            <label for="question5">People can rarely get you upset.</label>
+            <select class="custom-select bg-light" required>
+                <option value="">Select an option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <div class="invalid-feedback">Please select an option.</div>
+        </div>
+        <hr class="my-4">
+
+        <h4>Question 6</h4>
+        <div class="form-group">
+            <label for="question6">It's often difficult for you to relate to other people’s feelings.</label>
+            <select class="custom-select bg-light" required>
+                <option value="">Select an option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <div class="invalid-feedback">Please select an option.</div>
+        </div>
+        <hr class="my-4">
+
+        <h4>Question 7</h4>
+        <div class="form-group">
+            <label for="question7">In a discussion, truth should be more important than people’s sensitivities.</label>
+            <select class="custom-select bg-light" required>
+                <option value="">Select an option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <div class="invalid-feedback">Please select an option.</div>
+        </div>
+        <hr class="my-4">
+        
+        <h4>Question 8</h4>
+        <div class="form-group">
+            <label for="question8">You rarely get carried away by fantasies and ideas.</label>
+            <select class="custom-select bg-light" required>
+                <option value="">Select an option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <div class="invalid-feedback">Please select an option.</div>
+        </div>
+        <hr class="my-4">
+
+        <h4>Question 9</h4>
+        <div class="form-group">
+            <label for="question9">You think everyone’s views should be respected whether they're supported by facts or not.</label>
+            <select class="custom-select bg-light" required>
+                <option value="">Select an option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <div class="invalid-feedback">Please select an option.</div>
+        </div>
+        <hr class="my-4">
+
+        <h4>Question 10</h4>
+        <div class="form-group">
+            <label for="question10">You feel energized after spending time with a group of people.</label>
+            <select class="custom-select bg-light" required>
+                <option value="">Select an option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <div class="invalid-feedback">Please select an option.</div>
+        </div>
+        <hr class="my-4">
+
+        <button type="submit" class="btn btn-warning btn-block">Submit</button>
+    </form>
+    <!-- end survey questions -->
+
+    <hr class="my-4 col-8 bg-primary">
+
+    <!-- footer -->
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a target="_blank" class="nav-link" href="#">API Friends List</a>
+        </li>
+        <li class="nav-item">
+            <a target="_blank" class="nav-link" href="#">GitHub Repo</a>
+        </li>
+        <li class="nav-item">
+            <a target="_blank" class="nav-link" href="#">Heroku Project</a>
+        </li>
+    </ul>
+
+    <br>
+</div> <!-- closing container -->
+
+<!-- Bootstrap form validation messaging -->
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+            }, false);
+        });
+        }, false);
+    })();
+</script>
+
+</body>
+</html>

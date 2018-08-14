@@ -24,19 +24,19 @@ module.exports = function(app) {
             
             for (var j = 0; j < answers.length; j++) {
                 diff += Math.abs(friends[i].scores[j] - answers[j]);
-            }
+            };
 
             if (diff < diffTotal) {
                 diffTotal = diff;
                 matchName = friends[i].name;
                 matchPhoto = friends[i].photo;
             }
-        }
-        
+        };
+
         friends.push(surveyInput);
 
         res.json({ status: `Here's your scrub free match:`, matchName: matchName, matchPhoto: matchPhoto });
 
     });
         
-}
+};

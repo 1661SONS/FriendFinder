@@ -17,7 +17,7 @@
     <h1 class="col-8 mx-auto"><i class="far fa-kiss-wink-heart text-danger"></i>&nbsp; Survey</h1>
     <hr class="my-4 col-8 bg-primary">
     <form class="col-8 mx-auto needs-validation" novalidate>
-       
+
         <!-- about you section -->
         <h3>About You</h3>
         <div class="form-group">
@@ -31,7 +31,7 @@
             <div class="invalid-feedback">Please enter a full valid URL.</div>
             <hr class="my-4 bg-primary">
         </div>
-        
+
         <!-- begin survey questions -->
         <h4>Question 1</h4>
         <div class="form-group">
@@ -137,7 +137,7 @@
             <div class="invalid-feedback">Please select an option.</div>
         </div>
         <hr class="my-4">
-        
+
         <h4>Question 8</h4>
         <div class="form-group">
             <label for="question8">You rarely get carried away by fantasies and ideas. <span class="text-danger font-weight-bold">*</span></label>
@@ -203,6 +203,9 @@
     </ul>
 
     <!-- match modal -->
+
+    <!-- because i can't get the validation working properly, this modal can be triggered without any form data, thus resulting in an empty modal displaying -->
+
     <div class="modal fade" id="matchModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -233,7 +236,9 @@
 
 <!-- Bootstrap JS for form validation messaging -->
 <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
+
+    // can't get this to function correctly with the modal
+
     (function() {
         'use strict';
         window.addEventListener('load', function() {
@@ -253,18 +258,10 @@
     })();
 </script>
 
-<!-- Bootstrap JS for modal launching -->
-<script>
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus')
-});
-</script>
-
 <!-- submit button logic -->
 <script>
     $('#submitSurvey').on('click', function(event) {
         event.preventDefault();
-
         var surveyInput = {
             name: $('#nameInput').val().trim(),
             photo: $('#photoURL').val().trim(),
@@ -281,7 +278,6 @@
                 $('#question10').val().trim()
             ]
         };
-
     $.post('/api/friends', surveyInput).done(function(data) {
         $('#matchName').html(data.matchName);
         $('#matchPhoto').attr('src', data.matchPhoto);

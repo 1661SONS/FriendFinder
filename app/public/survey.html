@@ -36,7 +36,7 @@
         <h4>Question 1</h4>
         <div class="form-group">
             <label for="question1">Your mind is always buzzing with unexplored ideas and plans. <span class="text-danger font-weight-bold">*</span></label>
-            <select class="custom-select bg-light" required>
+            <select id="question1" class="custom-select bg-light" required>
                 <option value="">Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -51,7 +51,7 @@
         <h4>Question 2</h4>
         <div class="form-group">
             <label for="question2">Generally speaking, you rely more on your experience than your imagination. <span class="text-danger font-weight-bold">*</span></label>
-            <select class="custom-select bg-light" required>
+            <select id="question2" class="custom-select bg-light" required>
                 <option value="">Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -66,7 +66,7 @@
         <h4>Question 3</h4>
         <div class="form-group">
             <label for="question3">You find it easy to stay relaxed and focused even when under some pressure. <span class="text-danger font-weight-bold">*</span></label>
-            <select class="custom-select bg-light" required>
+            <select id="question3" class="custom-select bg-light" required>
                 <option value="">Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -81,7 +81,7 @@
         <h4>Question 4</h4>
         <div class="form-group">
             <label for="question4">You rarely do something just out of sheer curiosity. <span class="text-danger font-weight-bold">*</span></label>
-            <select class="custom-select bg-light" required>
+            <select id="question4" class="custom-select bg-light" required>
                 <option value="">Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -96,7 +96,7 @@
         <h4>Question 5</h4>
         <div class="form-group">
             <label for="question5">People can rarely get you upset. <span class="text-danger font-weight-bold">*</span></label>
-            <select class="custom-select bg-light" required>
+            <select id="question5" class="custom-select bg-light" required>
                 <option value="">Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -111,7 +111,7 @@
         <h4>Question 6</h4>
         <div class="form-group">
             <label for="question6">It's often difficult for you to relate to other people’s feelings. <span class="text-danger font-weight-bold">*</span></label>
-            <select class="custom-select bg-light" required>
+            <select id="question6" class="custom-select bg-light" required>
                 <option value="">Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -126,7 +126,7 @@
         <h4>Question 7</h4>
         <div class="form-group">
             <label for="question7">In a discussion, truth should be more important than people’s sensitivities. <span class="text-danger font-weight-bold">*</span></label>
-            <select class="custom-select bg-light" required>
+            <select id="question7" class="custom-select bg-light" required>
                 <option value="">Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -141,7 +141,7 @@
         <h4>Question 8</h4>
         <div class="form-group">
             <label for="question8">You rarely get carried away by fantasies and ideas. <span class="text-danger font-weight-bold">*</span></label>
-            <select class="custom-select bg-light" required>
+            <select id="question8" class="custom-select bg-light" required>
                 <option value="">Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -156,7 +156,7 @@
         <h4>Question 9</h4>
         <div class="form-group">
             <label for="question9">You think everyone’s views should be respected whether they're supported by facts or not. <span class="text-danger font-weight-bold">*</span></label>
-            <select class="custom-select bg-light" required>
+            <select id="question9" class="custom-select bg-light" required>
                 <option value="">Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -171,7 +171,7 @@
         <h4>Question 10</h4>
         <div class="form-group">
             <label for="question10">You feel energized after spending time with a group of people. <span class="text-danger font-weight-bold">*</span></label>
-            <select class="custom-select bg-light" required>
+            <select id="question10" class="custom-select bg-light" required>
                 <option value="">Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -183,7 +183,7 @@
         </div>
         <hr class="my-4">
 
-        <button type="submit" data-toggle="modal" data-target="#matchModal" class="btn btn-outline-danger btn-block"><i class="fas fa-heart"></i>&nbsp; Submit</button>
+        <button type="submit" data-toggle="modal" data-target="#matchModal" id="submitSurvey" class="btn btn-outline-danger btn-block"><i class="fas fa-heart"></i>&nbsp; Submit</button>
     </form>
     <!-- end survey questions -->
 
@@ -218,12 +218,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p class="card-text">Match Name</p>
-                <img class="card-img-bottom" src="https://thumbs.gfycat.com/ImperturbableAccurateArcherfish-max-1mb.gif" alt="Friend Match Photo">
+                <p class="card-text" id="matchName"></p>
+                <img class="card-img-bottom" id="matchPhoto" src="" alt="Friend Match Photo">
             </div>
             <div class="modal-footer">
-                <!-- would be cool if this button also reset the form -->
-                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+                <!-- make sure this button actually refreshes the survey -->
+                <a href="/survey"><button type="button" class="btn btn-outline-dark" data-dismiss="modal">Rematch</button></a>
             </div>
             </div>
         </div>
@@ -233,16 +233,10 @@
 </div> <!-- closing container -->
 
 <!-- Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-<!-- Bootstrap JS for modal launching -->
-<script>
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus')
-});
-</script>
 <!-- Bootstrap JS for form validation messaging -->
 <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -263,6 +257,42 @@
         });
         }, false);
     })();
+</script>
+
+<!-- Bootstrap JS for modal launching -->
+<script>
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+});
+</script>
+
+<!-- submit button logic -->
+<script>
+    $('#submitSurvey').on('click', function(event) {
+        event.preventDefault();
+
+        var surveyInput = {
+            name: $('#nameInput').val().trim(),
+            photo: $('#photoURL').val().trim(),
+            scores: [
+                $('#question1').val().trim(),
+                $('#question2').val().trim(),
+                $('#question3').val().trim(),
+                $('#question4').val().trim(),
+                $('#question5').val().trim(),
+                $('#question6').val().trim(),
+                $('#question7').val().trim(),
+                $('#question8').val().trim(),
+                $('#question9').val().trim(),
+                $('#question10').val().trim()
+            ]
+        };
+
+    $.post('/api/friends', surveyInput).done(function(data) {
+        $('#matchName').html(data.matchName);
+        $('#matchPhoto').attr('src', data.matchPhoto);
+    });
+});
 </script>
 
 </body>
